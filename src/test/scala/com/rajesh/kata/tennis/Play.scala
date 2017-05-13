@@ -17,25 +17,36 @@ class Play extends UnitSpec {
   "Love" should "be description for score 0" in {
     val nimalan = Player("Nimalan")
     val nithilan = Player("Nithilan")
-    nimalan.score should be ("love")
-    nithilan.score should be ("love")
+    nimalan.score should be("love")
+    nithilan.score should be("love")
   }
-  "Points" should "not be added after 3" in {
+  "Points" should "not be added after 4" in {
     val nimalan = Player("Nimalan")
     val nithilan = Player("Nithilan")
-    nimalan.winBall
-    nimalan.winBall
-    nimalan.winBall
-    nimalan.winBall
-    nimalan.winBall
-    nimalan.winBall
-    nimalan.scoreInt should be(3)
-    nimalan.score should be ("forty")
+    (0 to 6).foreach(x=> nimalan.winBall)
+    nimalan.scoreInt should be(4)
+    nimalan.score should be("endOfPoints")
   }
   "Players" should "be able to join the game" in {
     val nimalan = Player("Nimalan")
     val nithilan = Player("Nithilan")
     val game = Game(nimalan, nithilan)
-    game.score should be ("love,love")
+    game.score should be("love,love")
+  }
+  "Advantage" should "describe when least three points have been scored by each side and a player has one more point than his opponent" in {
+    val nimalan = Player("nimalan")
+    val nithilan = Player("nithilan")
+    val game = Game(nimalan, nithilan)
+    (0 to 3).foreach(x => nimalan.winBall)
+    (0 to 2).foreach(x => nithilan.winBall)
+    game.score should be("advantage nimalan")
+  }
+  "Deuce" should "mean both the players have same points" in {
+    val nimalan = Player("nimalan")
+    val nithilan = Player("nithilan")
+    val game = Game(nimalan, nithilan)
+    (0 to 3).foreach(x => nimalan.winBall)
+    (0 to 4).foreach(x => nithilan.winBall)
+    game.score should be("deuce")
   }
 }
