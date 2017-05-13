@@ -10,4 +10,6 @@ object FizzBuzz {
     case(_,_,0) => "buzz"
     case(_,_,_) => i.toString
   }
+  def fizzbuzzSeries(i: Int) : List[String] = (1 until i).map(fizzbuzz(_)).toList
+  def fizzbuzzRange(i: Int, j: Int) : List[String] = (i to j).map(fizzbuzz(_)).toList
 }
