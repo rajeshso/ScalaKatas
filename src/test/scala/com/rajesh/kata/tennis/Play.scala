@@ -32,4 +32,10 @@ class Play extends UnitSpec {
     nimalan.scoreInt should be(3)
     nimalan.score should be ("forty")
   }
+  "Players" should "be able to join the game" in {
+    val nimalan = Player("Nimalan")
+    val nithilan = Player("Nithilan")
+    val game = Game(nimalan, nithilan)
+    game.score should be ("love,love")
+  }
 }
