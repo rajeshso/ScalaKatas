@@ -49,4 +49,12 @@ class Play extends UnitSpec {
     (0 to 4).foreach(x => nithilan.winBall)
     game.score should be("deuce")
   }
+  "Winner" should "win atleast 4 points in total and at least two more than the opponent" in {
+    val nimalan = Player("nimalan")
+    val nithilan = Player("nithilan")
+    val game = Game(nimalan, nithilan)
+    (0 to 4).foreach(x => nimalan.winBall)
+    (0 to 1).foreach(x => nithilan.winBall)
+    game.score should be("won nimalan")
+  }
 }

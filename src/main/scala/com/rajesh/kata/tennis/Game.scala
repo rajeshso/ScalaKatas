@@ -8,7 +8,7 @@ class Game(player1: Player, player2: Player) {
     val won = isWon
     val advantage = isAdvantage
     val isDeuce = ( player1.scoreInt>=3 || (player1.scoreInt>=3) ) && player1.scoreInt == player2.scoreInt
-    if (isDeuce) "deuce" else if (advantage._1) "advantage "+advantage._2 else player1.score + "," + player2.score
+    if (won._1) "won "+ won._2 else if (isDeuce) "deuce" else if (advantage._1) "advantage "+advantage._2 else player1.score + "," + player2.score
   }
   def isAdvantage: (Boolean, String) = (player1.scoreInt + player2.scoreInt == 7) match
     {
