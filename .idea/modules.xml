@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalakatas.iml" filepath="$PROJECT_DIR$/.idea/modules/scalakatas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ScalaKatas.iml" filepath="$PROJECT_DIR$/.idea/modules/ScalaKatas.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/scalakatas-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scalakatas-build.iml" />
     </modules>
   </component>
