@@ -3,7 +3,7 @@ package com.rajesh.kata.tennis
 /**
   * Created by Rajesh on 13-May-17.
   */
-class Player(val name: String) {
+class Player1(val name: String) {
   val pointString = List("love", "fifteen", "thirty", "forty" , "endOfPoints")
   var scoreInt = 0
 
@@ -12,6 +12,6 @@ class Player(val name: String) {
   def score: String = pointString(scoreInt)
 }
 
-object Player {
+object Player1 {
   def apply(name: String): Player = new Player(name)
 }

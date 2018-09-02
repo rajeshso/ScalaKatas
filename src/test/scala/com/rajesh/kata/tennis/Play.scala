@@ -25,7 +25,7 @@ class Play extends UnitSpec {
     val nithilan = Player("Nithilan")
     (0 to 6).foreach(x=> nimalan.winBall)
     nimalan.scoreInt should be(4)
-    nimalan.score should be("endOfPoints")
+    nimalan.score should be("endofPoints")
   }
   "Players" should "be able to join the game" in {
     val nimalan = Player("Nimalan")

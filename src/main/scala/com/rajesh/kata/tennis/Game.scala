@@ -3,7 +3,7 @@ import java.lang.Math._
 /**
   * Created by Rajesh on 13-May-17.
   */
-class Game(player1: Player, player2: Player) {
+class Game1(player1: Player, player2: Player) {
   def score: String = {
     val won = isWon
     val advantage = isAdvantage
@@ -22,6 +22,6 @@ class Game(player1: Player, player2: Player) {
   def leadPlayer : Player = if (player1.scoreInt > player2.scoreInt) player1 else player2
 
 }
-object Game {
+object Game1 {
   def apply(player1: Player, player2: Player): Game = new Game(player1, player2)
 }
